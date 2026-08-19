@@ -21,7 +21,7 @@
 //|  1   |  2   |  3   |
 //|      0      |  .   |  enter|
             bindings = <
-                &out OUT_BLE HOME &bt BT_CLR
+                &out OUT_BLE &bt BT_CLR
                 &kp LNLCK &kp SLASH &kp ASTRK &kp MINUS
                 &kp N7 &kp N8 &kp N9
                 &kp N4 &kp N5 &kp N6 &kp PLUS
