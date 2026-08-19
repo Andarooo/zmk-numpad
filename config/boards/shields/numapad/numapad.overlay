@@ -1,8 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 / {
     chosen {
-        zmk,kscan = &default_kscan;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &physical_layout0;
     };
 
     default_kscan: kscan {
@@ -44,5 +43,12 @@
         //   Key 18| Key 19| Key 20
             RC(5,0) RC(5,2) RC(5,3)
         >;
+    };
+
+    physical_layout0: physical_layout_ { // First physical layout, use different naming for other layouts
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        kscan = <&default_kscan>; // Label of the kscan node, optional if all layouts use the same
+        transform = <&default_transform>; // Label of the matrix transform for this layout
     };
 };
