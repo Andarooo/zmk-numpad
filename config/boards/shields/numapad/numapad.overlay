@@ -73,7 +73,6 @@
             , <&key_physical_attrs 100 100  200  525       0     0     0>
             , <&key_physical_attrs 100 100  300  525       0     0     0>
             ;
-        };
     };
 
     keypad_position_map {
