@@ -13,20 +13,42 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
 //|  m1  |  m2  |
 //|  num |  /   |  *   |  -   |
 //|  7   |  8   |  9   |
 //|  4   |  5   |  6   |  +   |
 //|  1   |  2   |  3   |
 //|      0      |  .   |  enter|
+        default_layer {
             bindings = <
-                &out OUT_BLE &bt BT_CLR
-                &kp LNLCK &kp SLASH &kp ASTRK &kp MINUS
+                &mo 1 &kp F
+                &tog 2 &kp SLASH &kp ASTRK &kp MINUS
                 &kp N7 &kp N8 &kp N9
                 &kp N4 &kp N5 &kp N6 &kp PLUS
                 &kp N1 &kp N2 &kp N3
                 &kp N0 &kp PERIOD &kp ENTER
+            >;
+        };
+
+        bluetooth_layer {
+            bindings = <
+                &trans &trans
+                &none &bt BT_CLR &bt BT_CLR_ALL &bt BT_PRV
+                &none &none &none
+                &bt BT_SEL 3 &bt BT_SEL 4 &none &bt BT_NXT
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
+                &none &none &none
+            >;
+        };
+
+        numunlock_layer {
+            bindings = <
+                &out OUT_BLE &bt BT_CLR
+                &tog 2 &kp SLASH &kp ASTRK &kp MINUS
+                &kp HOME &kp UP &kp PAGE_UP
+                &kp LEFT &kp N5 &kp RIGHT &kp PLUS
+                &kp END &kp DOWN &kp PAGE_DOWN
+                &kp INSERT &kp DELETE &trans
             >;
         };
     };
